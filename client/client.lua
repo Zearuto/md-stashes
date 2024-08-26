@@ -156,7 +156,7 @@ local function CreateTargets()
 	if Config.OxTarget then		
 		stashes = exports.ox_target:addBoxZone({name = 'mdstashes' .. v.id, coords = vector3(loc.x, loc.y,loc.z), size = vec(1,1,2), rotation = 0, debug = false, options = optionsox})
 	elseif Config.interact then
-		exports.interact:AddInteraction({ coords = vector3(loc.x, loc.y,loc.z), distance = 8.0, interactDst = 2.0, id = 'mdstashes'..v.id, name = 'mdstashes'..v.id}, {options = options})
+		exports.interact:AddInteraction({ coords = vector3(loc.x, loc.y,loc.z), distance = 8.0, interactDst = 2.0, id = 'mdstashes'..v.id, name = 'mdstashes'..v.id, options = options})
 	else
 		exports['qb-target']:AddBoxZone('mdstashes'..v.id, vector3(loc.x, loc.y,loc.z), 1.5, 1.75, {name = 'mdstashes'..v.id, minZ = loc.z-2,maxZ = loc.z+2,}, {options = options, distance = 2.0})
 	end	
